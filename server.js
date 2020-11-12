@@ -7,6 +7,11 @@ app.get("/", function (req, res) {
   res.send("Hello GET");
 });
 
+app.get("/about", function (req, res) {
+  console.log("about Request");
+  res.send("Hello about");
+});
+
 // Phuong thuc post() phan hoi mot POST Request
 app.post("/", function (req, res) {
   console.log("POST Request");
@@ -24,6 +29,9 @@ app.get("/ab*cd", function (req, res) {
   console.log("GET request /ab*cd");
   res.send("Page Pattern Match");
 });
+
+// express.static để phục vụ cho các file tĩnh như hình ảnh, css, js, ...
+app.use(express.static("public"));
 
 var server = app.listen(3000, function () {
   var host = server.address().address;
