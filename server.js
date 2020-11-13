@@ -1,10 +1,16 @@
 var express = require("express");
 var app = express();
 
-// Phuong thuc get() phan hoi mot GET Request
+// // Phuong thuc get() phan hoi mot GET Request
 // app.get("/", function (req, res) {
 //   console.log("GET Request");
 //   res.send("Hello GET");
+// });
+
+// // Phuong thuc get() phan hoi mot GET Request
+// app.get("/about", function (req, res) {
+//   console.log("GET Request");
+//   res.send("Hello About");
 // });
 
 // app.get("/about", function (req, res) {
@@ -29,6 +35,8 @@ var app = express();
 //   console.log("GET request /ab*cd");
 //   res.send("Page Pattern Match");
 // });
+
+
 
 // express.static để phục vụ cho các file tĩnh như hình ảnh, css, js, ...
 app.use(express.static("public"));
